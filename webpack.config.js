@@ -3,7 +3,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { resolve } = require('path');
 
 module.exports = {
-  entry: ['./src/index.js'],
+  entry: [
+    'react-hot-loader/patch',
+    './src/index.js'
+  ],
   output: {
     path: resolve('.', 'src'),
     filename: 'index.js',
@@ -33,13 +36,14 @@ module.exports = {
                     }
                   },
                 }
-              ]
+              ],
             ]
           }
         },
       },
       {
         test: /\.(css|sass|scss)/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'style-loader',

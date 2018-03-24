@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
-import NbaHome from './components/nba/NbaHome';
+import Home from './Home';
+import NbaHome from './Nba/NbaHome';
 
 const App = () => {
   return (
@@ -14,6 +13,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
-export default App;
 
-ReactDOM.render(<App />, document.getElementById("app"));
+export default App;

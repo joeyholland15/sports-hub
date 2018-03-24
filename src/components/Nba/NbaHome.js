@@ -1,10 +1,14 @@
 import React from 'react';
 import './NbaHome.scss';
 
-const NbaHome = () => (
-  <div styleName="container">
-    <span>NbaHome</span>
-  </div>
-);
+class NbaHome extends React.Component {
+  render() {
+    return (
+      <div styleName="container">
+        <span>Nba sdfssfds</span>
+      </div>
+    );
+  }
+}
 
 export default NbaHome;
