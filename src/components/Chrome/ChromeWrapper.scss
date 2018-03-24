@@ -1,0 +1,14 @@
+.wrapper {
+  margin: -8px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  height: calc(100vh - 8px);
+  box-sizing: border-box;
+
+  .content {
+    background: orange;
+    width: calc(100% - 72px);
+    height: 100vh;
+    background: #fafaff;
+  }
+}
