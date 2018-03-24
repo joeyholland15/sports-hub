@@ -1,23 +1,56 @@
-const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { resolve } = require('path');
 
 module.exports = {
   entry: ['./src/index.js'],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve('.', 'src'),
     filename: 'index.js',
   },
   devServer: {
     contentBase: "dist",
+    historyApiFallback: true,
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        include: resolve('.', 'src'),
         use: {
           loader: 'babel-loader',
+          options: {
+            plugins: [
+              'transform-react-jsx',
+              [
+                'react-css-modules',
+                {
+                  context: resolve('.', 'src'),
+                }
+              ]
+            ]
+          }
         },
+      },
+      {
+        test: /\.(css|sass|scss)/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: true,
+              localIdentName: '[local]___[hash:base64:5]'
+            }
+          },
+          {
+            loader: "sass-loader" // compiles Sass to CSS
+          }
+        ],
       },
       {
         test: /\.html$/,
@@ -32,7 +65,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: "./index.html",
       filename: "./index.html"
     })
   ]

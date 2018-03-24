@@ -23,13 +23,26 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.6",
+    "node-sass": "^4.8.3",
+    "postcss-scss": "^1.0.4",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
+    "react-css-modules": "^4.7.2",
     "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "babel-plugin-react-css-modules": "^3.3.3",
+    "babel-plugin-transform-jsx": "^2.0.0"
   }
 }

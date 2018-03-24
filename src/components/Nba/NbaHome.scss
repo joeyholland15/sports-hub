@@ -1,0 +1,9 @@
+$color: red;
+
+.container {
+  background: orange;
+
+  span {
+    background: $color;
+  }
+}
