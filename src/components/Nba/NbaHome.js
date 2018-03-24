@@ -1,8 +1,8 @@
 import React from 'react';
-import s from './NbaHome.scss';
+import './NbaHome.scss';
 
 const NbaHome = () => (
-  <div className={s.container}>
+  <div styleName="container">
     <span>NbaHome</span>
   </div>
 );

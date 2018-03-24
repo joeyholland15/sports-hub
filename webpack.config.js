@@ -27,6 +27,11 @@ module.exports = {
                 'react-css-modules',
                 {
                   context: resolve('.', 'src'),
+                  filetypes: {
+                    '.scss': {
+                      syntax: 'postcss-scss',
+                    }
+                  },
                 }
               ]
             ]
