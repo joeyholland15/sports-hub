@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ChromeWrapper from './Chrome/ChromeWrapper';
 import Home from './Home';
 import NbaHome from './Nba/NbaHome';
+import MlbHome from './Mlb/MlbHome';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <ChromeWrapper>
         <Switch>
           <Route path="/nba" component={NbaHome} />
+          <Route path="/mlb" component={MlbHome} />
           <Route exact path="/" component={Home} />
         </Switch>
       </ChromeWrapper>
